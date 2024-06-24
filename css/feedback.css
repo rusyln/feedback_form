@@ -1,21 +1,15 @@
-/* Overall feedback container */
-#feedback {
-    position: fixed;
-    left: 20px; /* Adjust as needed */
-    bottom: 20px; /* Adjust as needed */
-    width: 300px; /* Adjust width as needed */
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  /* Feedback form panel */
-  #feedback-form {
+/* Feedback form panel */
+#feedback-form {
     display: none; /* Initially hidden */
+    position: absolute;
     background-color: #fff; /* White background */
     border: 1px solid rgba(0,0,0,.2); /* Border for a cleaner look */
     box-shadow: 0 5px 10px rgba(0,0,0,.2); /* Optional: Add box-shadow for depth */
     padding: 20px; /* Padding inside the panel */
     max-height: 400px; /* Maximum height to enable scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
+    width: 300px; /* Adjust width as needed */
+    z-index: 1000; /* Ensure it's above other content */
   }
   
   /* Feedback tab */
