@@ -19,11 +19,13 @@ class FeedbackFormBlock extends BlockBase {
    */
   public function build() {
     // Attach the library for CSS and JS.
-    $build['#attached']['library'][] = 'feedback_form/feedback';
-
-    // Return the render array referencing the twig template.
     return [
       '#theme' => 'feedback_form',
+      '#attached' => [
+        'library' => [
+          'feedback_form/feedback',
+        ],
+      ],
     ];
   }
 
