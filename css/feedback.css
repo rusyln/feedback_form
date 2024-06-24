@@ -1,38 +1,40 @@
+/* Overall feedback container */
 #feedback {
     position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 250px;
-    width: 420px; /* Adjust width as needed */
-    background-color: transparent; /* Ensure the background of #feedback is transparent */
+    left: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    width: 300px; /* Adjust width as needed */
+    z-index: 1000; /* Ensure it's above other content */
   }
   
+  /* Feedback form panel */
   #feedback-form {
+    display: none; /* Initially hidden */
     background-color: #fff; /* White background */
+    border: 1px solid rgba(0,0,0,.2); /* Border for a cleaner look */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2); /* Optional: Add box-shadow for depth */
+    padding: 20px; /* Padding inside the panel */
+    max-height: 400px; /* Maximum height to enable scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
-    height: 100%; /* Adjust height as needed */
-    padding: 10px; /* Add padding inside the panel */
-    box-shadow: 0 5px 10px rgba(0,0,0,.2); /* Optional: Add box-shadow for a better look */
   }
   
+  /* Feedback tab */
   #feedback-tab {
     position: absolute;
-    right: -60px; /* Adjust position as needed */
+    right: -40px; /* Adjust positioning as needed */
     top: 50%; /* Center vertically */
     transform: translateY(-50%) rotate(-90deg); /* Rotate and center the tab */
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    width: 120px;
-    height: 42px;
-    background-color: rgba(0,0,0,0.5);
-    padding-top: 5px;
-    border-radius: 3px;
+    background-color: rgba(0,0,0,0.7); /* Dark background color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px 15px; /* Padding inside the tab */
+    border-radius: 3px; /* Rounded corners */
     z-index: 1001; /* Ensure it's above #feedback-form */
   }
   
+  /* Hover state for the tab */
   #feedback-tab:hover {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5); /* Darker background on hover */
   }
   
