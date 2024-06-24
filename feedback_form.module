@@ -1,6 +1,13 @@
 <?php
 
 /**
- * @file
- * Primary module hooks for Feedback Form module.
+ * Implements hook_theme().
  */
+function feedback_form_theme() {
+  return [
+    'feedback_form' => [
+      'render element' => 'elements',
+      'template' => 'feedback-form',
+    ],
+  ];
+}
