@@ -3,25 +3,23 @@
     left: 0;
     bottom: 0;
     height: 250px;
-    margin-left: -3px;
-    margin-bottom: -3px;
+    width: 420px; /* Adjust width as needed */
+    background-color: transparent; /* Ensure the background of #feedback is transparent */
   }
   
   #feedback-form {
-    float: left;
-    width: 300px;
-    height: 100%;
-    z-index: 1000;
-    padding-left: 5px;
-    padding-right: 10px;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 0px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    background-color: #fff; /* White background */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%; /* Adjust height as needed */
+    padding: 10px; /* Add padding inside the panel */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2); /* Optional: Add box-shadow for a better look */
   }
   
   #feedback-tab {
-    float: right;
+    position: absolute;
+    right: -60px; /* Adjust position as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%) rotate(-90deg); /* Rotate and center the tab */
     color: #fff;
     font-size: 20px;
     cursor: pointer;
@@ -29,14 +27,12 @@
     width: 120px;
     height: 42px;
     background-color: rgba(0,0,0,0.5);
-    margin-top: 60px;
-    margin-left: -42px;
     padding-top: 5px;
     border-radius: 3px;
-    transform: rotate(90deg);
+    z-index: 1001; /* Ensure it's above #feedback-form */
   }
   
-  #feedback-tab:hover { background-color: rgba(0,0,0,0.4); }
-  
-  #feedback-form textarea { resize: none; }
+  #feedback-tab:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
   
