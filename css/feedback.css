@@ -3,8 +3,13 @@
     left: 0;
     bottom: 0;
     height: 250px;
+    width: 420px; /* Adjusted width to fit both form and tab */
     margin-left: -3px;
     margin-bottom: -3px;
+    background-color: #fff; /* Set background color for the feedback area */
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    overflow: hidden; /* Hide any overflow to prevent scrollbars on #feedback itself */
   }
   
   #feedback-form {
@@ -12,16 +17,10 @@
     width: 300px;
     height: 100%;
     z-index: 1000;
-    padding-left: 5px;
-    padding-right: 10px;
-    background-clip: 'padding-box';
-    border: 1px solid rgba(0,0,0,.2);
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    padding: 10px; /* Added padding to match existing style */
+    background-color: #fff; /* Set background color to white */
+    overflow-y: auto; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
   }
   
   #feedback-tab {
@@ -32,20 +31,19 @@
     text-align: center;
     width: 120px;
     height: 42px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     margin-top: 60px;
     margin-left: -42px;
     padding-top: 5px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
     transform: rotate(90deg);
   }
   
-  #feedback-tab:hover { background-color: rgba(0,0,0,0.4); }
+  #feedback-tab:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
   
-  #feedback-form textarea { resize: none; }
+  #feedback-form textarea {
+    resize: none;
+  }
+  
