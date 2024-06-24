@@ -1,0 +1,8 @@
+name: Feedback Form
+type: module
+description: A module to display a feedback form in a block.
+package: Feedback
+core_version_requirement: ^9 || ^10
+dependencies:
+  - block
+  - jquery
