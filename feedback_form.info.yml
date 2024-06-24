@@ -1,8 +1,8 @@
-name: Feedback Form
+name: 'Feedback Form'
 type: module
-description: A module to display a feedback form in a block.
-package: Feedback
-core_version_requirement: ^9 || ^10
+description: 'A module to display a feedback form in a block.'
+core_version_requirement: ^10
+package: Custom
 dependencies:
-  - block
-  - jquery
+  - drupal:block
+version: 1.0.0
